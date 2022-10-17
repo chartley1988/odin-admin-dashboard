@@ -24,15 +24,115 @@ body {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) 4fr;
+    grid-template-columns: minmax(280px, 1fr) 4fr;
     grid-template-rows: 1fr 5fr;
 }
 
 header {
+    padding-left: 1.5rem;
     grid-row: 1/2;
     grid-column: 2/3;
     background-color: var(--light-background);
     box-shadow: 0rem 0.2rem 1rem 0.25rem var(--dark-background);
+    border-bottom: 2px var(--dark-background) solid;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.greeting-wrapper {
+    padding: 0.25rem;
+    grid-area: 2/1/3/2;
+    display: grid;
+    grid-template-columns: 80px 6fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+.greeting-wrapper > svg {
+    grid-area: 1/1/3/2;
+    height: 3rem;
+    width: auto;
+    padding-top: 5px;
+    color: var(--dark-background);
+    justify-content: center;
+    align-items: center;
+}
+
+.greeting {
+    grid-area: 1/2/2/3;
+    font-size: 1rem;
+    color: var(--dark-background);
+    justify-content: left;
+}
+
+.user-name {
+    grid-row: 2/2/3/3;
+    font-size: 2rem;
+    color: var(--dark-background);
+    justify-content: left;
+}
+
+.search-wrapper {
+    grid-area: 1/1/2/2;
+    padding: 0 0 0 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.search-wrapper > svg {
+    padding-right: 0.4rem;
+    color: var(--dark-background);
+}
+
+.search-wrapper > input {
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+    width: 100%;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    background-color: var(--light-accent);
+}
+
+.top-nav-wrapper {
+    padding: 1rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    grid-area: 1/2/2/2;
+    gap: 1rem;
+}
+
+.top-nav-wrapper > svg {
+    color: var(--dark-background);
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.top-nav-wrapper > p {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--dark-background);
+}
+
+.button-wrapper {
+    padding-right: 1rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button-wrapper > button {
+    height: 40px;
+    padding: 0 12px 0 12px;
+    background-color: var(--dark-background);
+    border-radius: 1rem;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--light-background);
 }
 
 nav {
@@ -64,7 +164,8 @@ main {
 
 .project-title {
     position: relative;
-    top: 16px;
+    top: 12px;
+    left: 8px;
     grid-row: 1/2;
     grid-column: 1/3;
     font-size: 1.5rem;
@@ -82,11 +183,13 @@ main {
 }
 
 .main-card {
+    padding: 1rem;
     width: 2fr;
     height: 300px;
     background-color: var(--light-background);
-    border-radius: 1rem;
-    border-left: 8px solid var(--light-accent)
+    border-radius: 12px;
+    border-left: 8px solid var(--light-accent);
+    font-size: 1.1rem;
 }
 
 nav > ul {
@@ -112,11 +215,13 @@ aside {
 }
 
 .aside-card {
+    padding: 1rem;
     width: 1fr;
     min-height: 400px;
     background-color: var(--light-background);
-    border-radius: 1rem;
-    border-left: 8px solid var(--light-accent)
+    border-radius: 12px;
+    border-left: 8px solid var(--light-accent);
+    font-size: 1.1rem;
 }
 
 .side-icon {
